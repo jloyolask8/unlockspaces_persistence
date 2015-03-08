@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="DEFAULT_PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.unlock.spaces.persistence.ActivityLog</class>
+    <class>com.unlock.spaces.persistence.Amenity</class>
+    <class>com.unlock.spaces.persistence.CancelationPolicy</class>
+    <class>com.unlock.spaces.persistence.City</class>
+    <class>com.unlock.spaces.persistence.Country</class>
+    <class>com.unlock.spaces.persistence.Organization</class>
+    <class>com.unlock.spaces.persistence.PaymentMethod</class>
+    <class>com.unlock.spaces.persistence.Photo</class>
+    <class>com.unlock.spaces.persistence.Reservation</class>
+    <class>com.unlock.spaces.persistence.ReservationMethod</class>
+    <class>com.unlock.spaces.persistence.ReservationStatus</class>
+    <class>com.unlock.spaces.persistence.Space</class>
+    <class>com.unlock.spaces.persistence.SpaceCategory</class>
+    <class>com.unlock.spaces.persistence.SpaceReview</class>
+    <class>com.unlock.spaces.persistence.SpaceStatus</class>
+    <class>com.unlock.spaces.persistence.SpaceType</class>
+    <class>com.unlock.spaces.persistence.Usuario</class>
+    <class>com.unlock.spaces.persistence.UserNotification</class>
+    <class>com.unlock.spaces.persistence.Venue</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/unlockspaces"/>
+      <property name="javax.persistence.jdbc.password" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="eclipselink.logging.logger" value="JavaLogger"/>
+      <property name="eclipselink.logging.level.sql" value="fine"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="pu" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.unlock.spaces.persistence.Organization</class>
+    <class>com.unlock.spaces.persistence.Usuario</class>
+    <class>com.unlock.spaces.persistence.Space</class>
+    <class>com.unlock.spaces.persistence.Photo</class>
+    <class>com.unlock.spaces.persistence.SpaceReview</class>
+    <class>com.unlock.spaces.persistence.SpaceType</class>
+    <class>com.unlock.spaces.persistence.UserNotification</class>
+    <class>com.unlock.spaces.persistence.Country</class>
+    <class>com.unlock.spaces.persistence.Reservation</class>
+    <class>com.unlock.spaces.persistence.City</class>
+    <class>com.unlock.spaces.persistence.Amenity</class>
+    <class>com.unlock.spaces.persistence.ReservationStatus</class>
+    <class>com.unlock.spaces.persistence.SpaceCategory</class>
+    <class>com.unlock.spaces.persistence.Venue</class>
+    <class>com.unlock.spaces.persistence.ReservationMethod</class>
+    <class>com.unlock.spaces.persistence.CancelationPolicy</class>
+    <class>com.unlock.spaces.persistence.ActivityLog</class>
+    <class>com.unlock.spaces.persistence.SpaceStatus</class>
+    <class>com.unlock.spaces.persistence.PaymentMethod</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
+      <property name="javax.persistence.jdbc.password" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
